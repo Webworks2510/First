@@ -6,6 +6,9 @@ const PORT = 3000
 app.get('/checking', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
 })
+app.get('/doublecheck', (req, res) => {
+  res.status(200).json('Welcome, your app is working well now also');
+})
 
 
 app.listen(PORT, () => {
