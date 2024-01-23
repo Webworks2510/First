@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 80;
+const PORT = 3000;
 const mysql = require("mysql");
 
 const db = mysql.createConnection({
@@ -19,7 +19,7 @@ app.get("/doublecheck", (req, res) => {
 app.get("/user", (req, res) => {
 	const sql = "SELECT * FROM user";
 	db.query(sql, (err, data) => {
-		if (err) res.json(err+" Due To Select");
+		if (err) res.json(err + " Due To Select");
 		return res.json(data);
 	});
 });
@@ -28,4 +28,3 @@ app.listen(PORT, () => {
 	console.log(`Server running at http://localhost:${PORT}`);
 });
 
-module.exports = app;
