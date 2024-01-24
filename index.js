@@ -8,6 +8,7 @@ const db = mysql.createConnection({
 	user: "umgfjp60t6onhv3z", // Replace with your database username
 	password: "oWzpM9hWP6f4OMT12B7J", // Replace with your database password
 	database: "bn26fvsk0hn87edanoym", // Replace with your database name
+	reconnect: true,
 });
 
 app.get("/checking", (req, res) => {
